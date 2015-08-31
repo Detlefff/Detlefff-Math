@@ -19,8 +19,11 @@ class math extends Script
 			if(file_exists($filepath)) {
 				unlink($filepath);
 			}
-			imagepng(Graph::getImage(), $filepath);
-			return $this->send($this->message->number, $filepath, 'image');
+			if(imagepng(Graph::getImage(), $filepath)) {
+				return $this->send($this->message->number, $filepath, 'image');
+			} else {
+				return $this->send($this->message->number, 'Graph generation unsuccessful');
+			}
 		}
 	}
 }
