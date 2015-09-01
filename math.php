@@ -9,8 +9,6 @@ class math extends Script
 {
 	public function run()
 	{
-		echo 'running';
-		echo strtolower(split(' ', $this->matches[0])[0]);
 		if(strtolower(split(' ', $this->matches[0])[0]) === 'math') {
 			return $this->send(Parser::solve($this->matches[1]));
 		} else {
