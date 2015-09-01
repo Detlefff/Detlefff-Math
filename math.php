@@ -20,9 +20,9 @@ class math extends Script
 				unlink($filepath);
 			}
 			if(imagepng(Graph::getImage(), $filepath)) {
-				return $this->send($this->message->number, $filepath, 'image');
+				return $this->send($filepath, 'image');
 			} else {
-				return $this->send($this->message->number, 'Graph generation unsuccessful');
+				return $this->send('Graph generation unsuccessful');
 			}
 		}
 	}
