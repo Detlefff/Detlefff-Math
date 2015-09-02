@@ -1,6 +1,5 @@
 <?php
 require_once __DIR__ . '/vendor/autoload.php';
-require_once 'scripts/script.php';
 
 use jlawrence\eos\Parser;
 use jlawrence\eos\Graph;
