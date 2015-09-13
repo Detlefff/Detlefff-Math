@@ -6,6 +6,10 @@ use jlawrence\eos\Graph;
 
 class math extends Script
 {
+	protected $helpMessage = "'graph EXPRESSION': Returns a plotted graph of the expression\n"
+							."'math EXPRESSION': Returns the solvement of the given expression\n";
+	protected $description = 'Solve mathematical expressions';
+
 	public function run()
 	{
 		if(strtolower(split(' ', $this->matches[0])[0]) === 'math') {
