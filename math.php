@@ -6,9 +6,9 @@ use jlawrence\eos\Graph;
 
 class math extends Script
 {
-	protected $helpMessage = "'graph EXPRESSION': Returns a plotted graph of the expression\n"
+	protected static $helpMessage = "'graph EXPRESSION': Returns a plotted graph of the expression\n"
 							."'math EXPRESSION': Returns the solvement of the given expression\n";
-	protected $description = 'Solve mathematical expressions';
+	protected static $description = 'Solve mathematical expressions';
 
 	public function run()
 	{
